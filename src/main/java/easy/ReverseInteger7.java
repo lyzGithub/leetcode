@@ -1,3 +1,4 @@
+package easy;
 
 public class ReverseInteger7 {
     public int reverse(int x) {

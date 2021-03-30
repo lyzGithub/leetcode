@@ -1,16 +1,20 @@
+package easy;
+
 import java.util.Stack;
 
-public class RemoveDuplicate1047 {
-    public String removeDuplicates(String S) {
-        if (S == null || S.length() <=0){
+public class RemoveDuplicate1047
+{
+    public String removeDuplicates(String S)
+    {
+        if (S == null || S.length() <= 0) {
             return null;
         }
         char[] chs = S.toCharArray();
         Stack<Character> st = new Stack<>();
-        int i=0;
+        int i = 0;
         st.push(chs[i]);
         i++;
-        while (i<chs.length) {
+        while (i < chs.length) {
             if (st.empty()) {
                 st.push(chs[i]);
                 i++;
@@ -18,7 +22,8 @@ public class RemoveDuplicate1047 {
             }
             if (st.peek().equals(chs[i])) {
                 st.pop();
-            } else {
+            }
+            else {
                 st.push(chs[i]);
             }
             i++;

@@ -1,3 +1,5 @@
+package medium;
+
 /**
  * Longest Palindromic Substring
  * center spread

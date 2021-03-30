@@ -1,7 +1,11 @@
+package medium;
+
 import java.util.LinkedList;
 
-public class BinodeLcci1712 {
-    public TreeNode convertBiNode(TreeNode root) {
+public class BinodeLcci1712
+{
+    public TreeNode convertBiNode(TreeNode root)
+    {
         LinkedList<TreeNode> link = new LinkedList<TreeNode>();
         midOrder(root, link);
         TreeNode first = null;
@@ -12,7 +16,8 @@ public class BinodeLcci1712 {
             if (first == null) {
                 first = treeNode;
                 tmp = treeNode;
-            } else {
+            }
+            else {
                 tmp.right = treeNode;
                 tmp = treeNode;
             }
@@ -21,7 +26,8 @@ public class BinodeLcci1712 {
         return first;
     }
 
-    public static void midOrder(TreeNode root, LinkedList<TreeNode> link) {
+    public static void midOrder(TreeNode root, LinkedList<TreeNode> link)
+    {
         if (root == null) {
             return;
         }
@@ -35,12 +41,14 @@ public class BinodeLcci1712 {
     }
 }
 
-class TreeNode {
+class TreeNode
+{
     int val;
     TreeNode left;
     TreeNode right;
 
-    TreeNode(int x) {
+    TreeNode(int x)
+    {
         val = x;
     }
 }

@@ -1,3 +1,5 @@
+package easy;
+
 public class PalindromeNumber9 {
     public boolean isPalindromeNumber(int x) {
         String s = String.valueOf(x);

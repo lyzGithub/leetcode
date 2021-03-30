@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package hard;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -49,8 +50,12 @@ public class RandomPickWithBlacklist710
 
         while (left < right) {
             int i = (left + right + 1) / 2;
-            if (blacks[i] - i > k) right = i - 1;
-            else left = i;
+            if (blacks[i] - i > k) {
+                right = i - 1;
+            }
+            else {
+                left = i;
+            }
         }
         return left == right && blacks[left] - left <= k ? k + left + 1 : k;
     }
