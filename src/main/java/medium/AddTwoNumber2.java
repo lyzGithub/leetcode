@@ -1,7 +1,11 @@
 package medium;
 
-public class AddTwoNumber2 {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+import util.ListNode;
+
+public class AddTwoNumber2
+{
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2)
+    {
         if (l1 == null || l2 == null) {
             return null;
         }
@@ -22,12 +26,13 @@ public class AddTwoNumber2 {
                 l22 = l22.next;
             }
             if (result == null) {
-                int re =  (num1 + num2 + up) % 10;
+                int re = (num1 + num2 + up) % 10;
                 up = (num1 + num2 + up) / 10;
                 result = new ListNode(re);
                 tmp = result;
-            } else {
-                int re =  (num1 + num2 + up) % 10;
+            }
+            else {
+                int re = (num1 + num2 + up) % 10;
                 up = (num1 + num2 + up) / 10;
                 ListNode now = new ListNode(re);
                 tmp.next = now;
@@ -36,17 +41,7 @@ public class AddTwoNumber2 {
         }
         if (up != 0) {
             tmp.next = new ListNode(up);
-
         }
         return result;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }
