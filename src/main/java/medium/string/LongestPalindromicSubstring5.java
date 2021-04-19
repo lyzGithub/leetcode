@@ -1,4 +1,4 @@
-package medium;
+package medium.string;
 
 /**
  * Longest Palindromic Substring
